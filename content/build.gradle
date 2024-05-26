@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
+}
+
+apply from: "$rootDir.path/projectBuildSettings/projectBuild.gradle"
+
+def config = ext.projectGradleConfig
+android {
+    namespace 'com.kortisan.content'
+    compileSdk config.compileSdkVersion
+
+    defaultConfig {
+        minSdk config.minSdkVersion
+        targetSdk config.targetSdkVersion
+        version getVersionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.11"
+    }
+}
+
+dependencies {
+    implementation project(path: ':framework')
+    implementation project(path: ':authentication')
+    implementation project(path: ':ksp')
+}

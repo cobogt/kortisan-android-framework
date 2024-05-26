@@ -1,0 +1,56 @@
+/**
+ * Este archivo incluye todas las dependencias disponibles solo para el framework base
+ * Idealmente no serán necesarias en los módulo de contenido
+ */
+
+dependencies {
+    // FIREBASE
+    implementation platform('com.google.firebase:firebase-bom:32.8.0')
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.4.1'
+    implementation 'com.google.firebase:firebase-config'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-common-ktx'
+
+    // SERVICIOS DE GOOGLE
+    // ADVERTENCIA: ACTUALIZAR A 4.4.0 GENERA CONFLICTO CON PROTOBUF
+    implementation 'com.google.gms:google-services:4.3.15'
+
+    // REFLEXIÓN DE KOTLIN
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.20'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.9.22'
+
+    // Actualización de la aplicación ????
+    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+
+    // UTILIDADES
+    //implementation 'org.apache.commons:commons-lang3:3.12.0'
+    implementation 'commons-net:commons-net:3.5'
+    implementation 'joda-time:joda-time:2.10.9:no-tzdb'
+
+    // DEXTER: PERMISOS
+    implementation 'com.karumi:dexter:6.2.2'
+
+    // RETROFIT
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    // OKHTTP
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
+    testImplementation('com.squareup.okhttp3:mockwebserver:4.10.0')
+
+    // COMPOSE
+    implementation 'androidx.compose.ui:ui:1.6.4'
+    implementation 'androidx.compose.runtime:runtime:1.6.4'
+
+    // COMPOSE EN ACTIVIDADES
+    implementation 'androidx.activity:activity-compose:1.8.2'
+
+    // MULTIDEX:
+//    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // ENCRIPTACIÓN
+    implementation 'androidx.security:security-crypto:1.0.0'
+    implementation 'androidx.biometric:biometric:1.1.0'
+}

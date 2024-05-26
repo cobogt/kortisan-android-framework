@@ -1,0 +1,27 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+//sourceSets.main {
+//    java.srcDirs("src/main/kotlin")
+//}
+
+kotlin {
+    sourceSets.main {
+        kotlin.srcDir("build/generated/ksp/main/kotlin")
+    }
+    sourceSets.test {
+        kotlin.srcDir("build/generated/ksp/test/kotlin")
+    }
+}
+
+dependencies {
+    // PROCESADOR DE ANOTACIONES
+    implementation "com.google.devtools.ksp:symbol-processing-api:1.9.0-1.0.13"
+    implementation "com.squareup:kotlinpoet:1.14.2"
+}

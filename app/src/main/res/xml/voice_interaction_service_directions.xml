@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<voice-interaction-service-directions>
+    <directions xmlns:android="http://schemas.android.com/apk/res/android">
+        <item>Para buscar un producto en la aplicación, di "Ok Google" seguido de tu búsqueda.</item>
+        <item>Por ejemplo, puedes decir "Ok Google, busca zapatillas de running" para encontrar zapatillas de running disponibles para la compra.</item>
+        <item>También puedes decir "Ok Google, muestra el carrito de compras" para ver el contenido de tu carrito de compras.</item>
+    </directions>
+</voice-interaction-service-directions>

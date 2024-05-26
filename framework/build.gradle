@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.protobuf'
+    id 'kotlin-kapt'
+    id 'com.google.devtools.ksp'
+// Habilitar cuando se instale google-services.json
+//    id 'com.google.gms.google-services'
+}
+
+apply from: "$rootDir.path/projectBuildSettings/projectBuild.gradle"
+
+def config = ext.projectGradleConfig
+android {
+    namespace 'com.kortisan.framework'
+    compileSdk config.compileSdkVersion
+
+    defaultConfig {
+        minSdk config.minSdkVersion
+        targetSdk config.targetSdkVersion
+        version getVersionName()
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.11"
+    }
+    buildFeatures {
+        buildConfig true
+    }
+
+    libraryVariants.all { variant ->
+        kotlin.sourceSets {
+            def name = variant.name
+            getByName(name) {
+                kotlin.srcDir("$buildDir/generated/ksp/$name/kotlin")
+            }
+        }
+    }
+}
+
+apply from: "$rootDir.path/projectBuildSettings/projectDependenciesFramework.gradle"
+apply from: "$rootDir.path/projectBuildSettings/protobufSettings.gradle"
+
+dependencies {
+    implementation project(path: ':ksp')
+    ksp project(":ksp")
+}
