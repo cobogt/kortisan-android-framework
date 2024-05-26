@@ -1,0 +1,27 @@
+ext.projectGradleConfig = [
+    applicationId:        "com.kortisan.demoapp",
+    targetSdkVersion:      34,
+    compileSdkVersion:     34,
+    minSdkVersion:         26,
+    versionCode:           1,
+    revisionCode:          1,
+    fixCode:               1,
+    launchVersionCodeName: "Alfa"
+]
+
+def projectConfig = ext.projectGradleConfig
+
+ext.getVersionCode = {
+    return  (projectConfig.versionCode * 1000) +
+            (projectConfig.revisionCode * 10) +
+             projectConfig.fixCode
+}
+
+ext.getVersionName = {
+    String versionName = (projectConfig.versionCode * 1000) + "." +
+                         (projectConfig.revisionCode * 10) + "." +
+                          projectConfig.fixCode  + "_" +
+                          projectConfig.launchVersionCodeName
+
+    return versionName
+}
