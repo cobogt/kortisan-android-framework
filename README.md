@@ -2,6 +2,12 @@
 Kortisan a mobile framework aimed to implement the best practices and help to build big and 
 large-scale applications, prioritising code reusability and modularity.
 
+## General schematic
+![image](https://github.com/cobogt/kortisan-android-framework/assets/6600651/2306dbf0-aea7-4a9e-9068-6dc61c0811cc)
+
+
+[Link to the detailed description of process](https://docs.google.com/document/d/1wuJT3hf586eP1Cgk791YWSEfBMrYi3ZrScmb3qDwFg4/edit#heading=h.zf8ogtuiva64)
+
 # How to start
 + Check the documentation [(In spanish)](https://docs.google.com/document/d/1wuJT3hf586eP1Cgk791YWSEfBMrYi3ZrScmb3qDwFg4/edit?usp=sharing)
 + Configure live templates in IDE
