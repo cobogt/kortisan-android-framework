@@ -4,7 +4,6 @@ package com.kortisan.framework.storage.local.datastore.serializers
  * Project KoreFrame
  * Created by Jacobo G Tamayo on 30/12/22.
 * * * * * * * * * * **/
-import android.util.Log
 import androidx.datastore.core.CorruptionException
 import androidx.datastore.core.Serializer
 import com.kortisan.framework.storage.local.datastore.TokensVaultStore

@@ -21,28 +21,6 @@ class PushNotificationController: ReduxControllerAbstract() {
     private val notificationManager: NotificationManager =
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
-    fun showCleverTapNotification( notification: NotificationActions.ShowCleverTapNotification ) {
-        val groupCleverId = "GROUP_CLEVER_ID"
-        val groupName = "CLEVER"
-
-        CleverTapAPI.createNotificationChannelGroup(
-            context, groupCleverId, groupName
-        )
-
-        CleverTapAPI.createNotificationChannel(
-            context,
-            CLEVERTAP.cId,
-            CLEVERTAP.cName,
-            "",
-            NotificationManager.IMPORTANCE_MAX,
-            groupCleverId,
-            true
-        )
-
-        CleverTapAPI.createNotification(
-            context, notification.notificationBundle
-        )
-    }
 
     fun showNotification( notification: NotificationActions.ShowNotification ): Int {
         val notificationBuilder = NotificationCompat.Builder(
