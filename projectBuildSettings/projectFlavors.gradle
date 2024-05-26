@@ -1,6 +1,0 @@
-/**
- * Flavors disponibles en el proyecto
- */
-ext.projectFlavors = {
-    return {}
-}
