@@ -30,7 +30,7 @@ class StartActivity: AppCompatActivity() {
         // Despachamos una acción al bus de eventos sin que repercuta en una vista
         ApplicationActionDispatcher.dispatch ( startAction.apply {
             // Aplicamos la compuerta que comprueba el estado de login del usuario
-                // gates = listOf( LoggedGate )
+                 gates = listOf( LoggedGate )
             }
         )
     }

@@ -5,8 +5,8 @@
 
 dependencies {
     // FIREBASE
-    implementation platform('com.google.firebase:firebase-bom:32.8.0')
-    implementation 'com.google.firebase:firebase-messaging-ktx:23.4.1'
+    implementation platform('com.google.firebase:firebase-bom:33.1.0')
+    implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
     implementation 'com.google.firebase:firebase-config'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-common-ktx'
@@ -41,11 +41,11 @@ dependencies {
     testImplementation('com.squareup.okhttp3:mockwebserver:4.10.0')
 
     // COMPOSE
-    implementation 'androidx.compose.ui:ui:1.6.4'
-    implementation 'androidx.compose.runtime:runtime:1.6.4'
+    implementation 'androidx.compose.ui:ui:1.6.7'
+    implementation 'androidx.compose.runtime:runtime:1.6.7'
 
     // COMPOSE EN ACTIVIDADES
-    implementation 'androidx.activity:activity-compose:1.8.2'
+    implementation 'androidx.activity:activity-compose:1.9.0'
 
     // MULTIDEX:
 //    implementation 'androidx.multidex:multidex:2.0.1'

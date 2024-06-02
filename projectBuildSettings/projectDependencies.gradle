@@ -5,13 +5,13 @@
 
 dependencies {
     // CORE
-    implementation 'androidx.core:core-ktx:1.12.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.collection:collection-ktx:1.4.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.1'
     implementation 'androidx.navigation:navigation-runtime:2.7.7'
-    implementation 'com.google.android.material:material:1.11.0'
-    implementation 'androidx.activity:activity-ktx:1.8.2'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.activity:activity-ktx:1.9.0'
 
     // ROOM
     implementation "androidx.room:room-runtime:2.6.1"
@@ -22,9 +22,9 @@ dependencies {
     ksp 'androidx.room:room-compiler:2.6.1'
 
     // DATASTORE: Reemplazo de SharedPreferences
-    implementation 'androidx.datastore:datastore:1.0.0'
-    implementation 'androidx.datastore:datastore-core:1.0.0'
-    implementation 'androidx.datastore:datastore-preferences:1.0.0'
+    implementation 'androidx.datastore:datastore:1.1.1'
+    implementation 'androidx.datastore:datastore-core:1.1.1'
+    implementation 'androidx.datastore:datastore-preferences:1.1.1'
 
     // PROTOBUF: Parser de archivos .proto a clases Java, necesario para Datastore
     implementation 'com.google.protobuf:protobuf-javalite:3.21.7'
@@ -41,18 +41,18 @@ dependencies {
 
     // COMPOSE CON MATERIAL DESIGN
     implementation 'androidx.compose.material3:material3:1.2.1'
-    implementation 'androidx.compose.material:material-icons-core:1.6.4'
-    implementation 'androidx.compose.material:material-icons-extended:1.6.4'
+    implementation 'androidx.compose.material:material-icons-core:1.6.7'
+    implementation 'androidx.compose.material:material-icons-extended:1.6.7'
     implementation 'androidx.compose.material3:material3-window-size-class:1.2.1'
 
     // COMPOSE CON NAVEGACION
     implementation 'androidx.navigation:navigation-compose:2.7.7'
 
     // COMPOSE EN VIEWMODEL
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1'
 
     // UTILIDADES PARA VIEWMODELS
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1'
 
     // LINT: Calidad de código
     // runtimeOnly 'com.android.tools.lint:lint-gradle:30.4.0'
@@ -67,4 +67,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:truth:1.5.0"
     androidTestImplementation "androidx.test:runner:1.5.2"
     androidTestUtil "androidx.test:orchestrator:1.4.2"
+
+    // JUNIT
+    testImplementation "junit:junit:4.13.2"
 }
