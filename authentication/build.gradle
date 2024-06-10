@@ -30,4 +30,8 @@ android {
 
 dependencies {
     implementation project(path: ':framework')
+
+    // KSP Annotation processor
+    implementation project(path: ':ksp')
+    ksp project(":ksp")
 }

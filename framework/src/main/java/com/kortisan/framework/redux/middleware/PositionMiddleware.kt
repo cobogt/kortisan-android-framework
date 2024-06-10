@@ -12,11 +12,17 @@ import com.kortisan.framework.redux.stores.ApplicationStateStore
 
 object PositionMiddleware: MiddlewareInterface {
     override fun doNext(action: ReduxAction, applicationState: ApplicationStateStore): ReduxAction {
-        if( action is GeopositionActions ) {
-            ControllersProxy.getController<GeopositionController>()?.run {
+        if (action is GeopositionActions)
+            ControllersProxy.getController<GeopositionController>()?.also { geoController ->
                 // TODO: Logica para controlar el GPS
+                when (action) {
+                    is GeopositionActions.SetGeopositionAppStateAction -> {
+                        geoController.reduceApplicationState( action )
+
+                        return ReduxAction.EmptyAction
+                    }
+                }
             }
-        }
 
         return action
     }

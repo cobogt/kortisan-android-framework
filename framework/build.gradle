@@ -46,6 +46,7 @@ apply from: "$rootDir.path/projectBuildSettings/projectDependenciesFramework.gra
 apply from: "$rootDir.path/projectBuildSettings/protobufSettings.gradle"
 
 dependencies {
+    // KSP Annotation processor
     implementation project(path: ':ksp')
     ksp project(":ksp")
 }

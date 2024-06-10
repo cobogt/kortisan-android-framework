@@ -5,8 +5,8 @@ buildscript {
     }
     dependencies {
 //    classpath 'com.amazonaws:aws-android-sdk-appsync-gradle-plugin:3.1.1'
-        classpath 'com.google.gms:google-services:4.4.1'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
+        classpath 'com.google.gms:google-services:4.4.2'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.1'
         classpath 'com.google.firebase:perf-plugin:1.4.2'
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
@@ -30,3 +30,5 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+apply from: "$rootDir.path/projectBuildSettings/detectAndJoinKSP.gradle"

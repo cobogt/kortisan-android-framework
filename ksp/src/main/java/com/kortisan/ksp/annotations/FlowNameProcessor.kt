@@ -9,6 +9,10 @@ import com.google.devtools.ksp.symbol.KSClassDeclaration
 import com.google.devtools.ksp.validate
 import kotlin.reflect.KClass
 
+/**
+ * When called from a module, it looks for all the annotations of flownames and creates the
+ * directories for the NavigationController.
+ */
 class FlowNameProcessor(
     private val environment: SymbolProcessorEnvironment
 ): SymbolProcessor {
@@ -19,6 +23,7 @@ class FlowNameProcessor(
         .filterIsInstance<KSClassDeclaration>()
 
     override fun process(resolver: Resolver): List<KSAnnotated> {
+        // Detects all flownames for activities
         val listedActivities: Sequence<KSClassDeclaration> =
             resolver.findAnnotations(FlowNameActivity::class)
 

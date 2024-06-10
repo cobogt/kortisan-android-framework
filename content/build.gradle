@@ -31,5 +31,8 @@ android {
 dependencies {
     implementation project(path: ':framework')
     implementation project(path: ':authentication')
+
+    // KSP Annotation processor
     implementation project(path: ':ksp')
+    ksp project(":ksp")
 }

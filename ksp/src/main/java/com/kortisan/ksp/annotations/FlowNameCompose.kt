@@ -1,7 +1,7 @@
 package com.kortisan.ksp.annotations
 
-@Target( AnnotationTarget.PROPERTY_SETTER )
-@Retention( AnnotationRetention.SOURCE )
+@Target( AnnotationTarget.PROPERTY_SETTER, AnnotationTarget.EXPRESSION)
+@Retention(AnnotationRetention.SOURCE)
 annotation class FlowNameCompose(
     val activityClassName: String,
     val flowName: String,

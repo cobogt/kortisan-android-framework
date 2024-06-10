@@ -1,0 +1,5 @@
+tasks.register("detectAndJoinKSP") {
+    doLast {
+        println "detectAndJoinKSP is running NOW"
+    }
+}

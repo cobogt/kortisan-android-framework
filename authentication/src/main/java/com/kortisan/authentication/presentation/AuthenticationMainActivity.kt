@@ -19,6 +19,8 @@ import com.kortisan.framework.redux.actions.NavigationActions
 import com.kortisan.framework.redux.actions.ReduxAction
 import com.kortisan.framework.redux.controllers.navigation.targets.AuthenticationNavigationGroup
 import com.kortisan.framework.redux.controllers.navigation.targets.TargetCompose
+import com.kortisan.ksp.annotations.FlowNameActivity
+import com.kortisan.ksp.annotations.FlowNameCompose
 import kotlinx.coroutines.launch
 
 /** * * * * * * * * *
@@ -26,6 +28,7 @@ import kotlinx.coroutines.launch
  * Created by Jacobo G Tamayo on 30/12/22.
 * * * * * * * * * * **/
 
+@FlowNameActivity("authentication")
 class AuthenticationMainActivity: ComponentActivity(), SingleActivityWithViewModel {
     override val singleActivityViewModel: AuthenticationViewModel by viewModels {
         ReduxViewModelFactory
@@ -41,18 +44,22 @@ class AuthenticationMainActivity: ComponentActivity(), SingleActivityWithViewMod
             navController.enableOnBackPressed( true )
 
             NavHost(navController = navController, startDestination = "/") {
+                @FlowNameCompose( "AuthenticationMainActivity", "authentication_root" )
                 composable("/") {
                     Text(text = "Raiz")
                 }
 
+                @FlowNameCompose( "AuthenticationMainActivity", "authentication_login" )
                 composable("/login") {
                     singleActivityViewModel.loginBloc.Render()
                 }
 
+                @FlowNameCompose( "AuthenticationMainActivity", "authentication_biometrics" )
                 composable("/read_biometrics") {
                     singleActivityViewModel.readBiometricsBloc.Render()
                 }
 
+                @FlowNameCompose( "AuthenticationMainActivity", "authentication_ask_email" )
                 composable("/ask_for_email") {
                     singleActivityViewModel.askForEmailBloc.Render()
                 }

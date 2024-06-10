@@ -9,7 +9,7 @@ import com.kortisan.framework.redux.controllers.navigation.targets.TargetActivit
  * Contiene todas las rutas navegables por la aplicación
  * TODO: Construir esta clase en tiempo de compilación
  */
-object NavigationDirectories {
+data object NavigationDirectories {
     val TAG: String = javaClass.simpleName
 
     // DIRECTORIO 1: Almacenamos todas las rutas usando el Path como llave, los parámetros que
