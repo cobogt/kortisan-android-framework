@@ -9,8 +9,8 @@ plugins {
 }
 
 apply from: "$rootDir.path/projectBuildSettings/projectBuild.gradle"
-
 def config = ext.projectGradleConfig
+
 android {
     namespace 'com.kortisan.framework'
     compileSdk config.compileSdkVersion
@@ -26,7 +26,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = config.kotlinCompilerExtVer
     }
     buildFeatures {
         buildConfig true

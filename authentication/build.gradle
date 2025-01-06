@@ -6,7 +6,6 @@ plugins {
 }
 
 apply from: "$rootDir.path/projectBuildSettings/projectBuild.gradle"
-
 def config = ext.projectGradleConfig
 
 android {
@@ -25,7 +24,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
+        kotlinCompilerExtensionVersion = config.kotlinCompilerExtVer
     }
 }
 
