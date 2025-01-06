@@ -5,52 +5,52 @@
 
 dependencies {
     // FIREBASE
-    implementation platform('com.google.firebase:firebase-bom:33.7.0')
-    implementation 'com.google.firebase:firebase-messaging-ktx:24.1.0'
-    implementation 'com.google.firebase:firebase-config'
-    implementation 'com.google.firebase:firebase-analytics'
-    implementation 'com.google.firebase:firebase-common-ktx'
+    implementation libs.firebase.bom
+    implementation libs.firebase.messaging.ktx
+    implementation libs.firebase.config
+    implementation libs.firebase.analytics
+    implementation libs.firebase.common.ktx
 
     // SERVICIOS DE GOOGLE
     // ADVERTENCIA: ACTUALIZAR A 4.4.0 GENERA CONFLICTO CON PROTOBUF
-    implementation 'com.google.gms:google-services:4.3.15'
+    implementation libs.google.services.v4315
 
     // REFLEXIÓN DE KOTLIN
-    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.20'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.9.23'
+    implementation libs.kotlin.reflect
+    implementation libs.kotlin.stdlib.common
 
     // Actualización de la aplicación ????
     // implementation libs.installreferrer
     // implementation libs.core.ktx
 
-    // UTILIDADES
+    // UTILITIES
     //implementation 'org.apache.commons:commons-lang3:3.12.0'
-    implementation 'commons-net:commons-net:3.5'
-    implementation 'joda-time:joda-time:2.10.9:no-tzdb'
+    implementation libs.commons.net
+    implementation libs.joda.time
 
-    // DEXTER: PERMISOS
-    implementation 'com.karumi:dexter:6.2.2'
+    // DEXTER: Permissions
+    implementation libs.dexter
 
     // RETROFIT
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation libs.retrofit
+    implementation libs.converter.gson
 
     // OKHTTP
-    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
-    testImplementation('com.squareup.okhttp3:mockwebserver:4.10.0')
+    implementation libs.okhttp
+    implementation libs.logging.interceptor
+    testImplementation(libs.mockwebserver)
 
     // COMPOSE
-    implementation 'androidx.compose.ui:ui:1.7.6'
-    implementation 'androidx.compose.runtime:runtime:1.7.6'
+    implementation libs.ui
+    implementation libs.runtime
 
-    // COMPOSE EN ACTIVIDADES
-    implementation 'androidx.activity:activity-compose:1.9.3'
+    // COMPOSE FOR ACTIVITIES
+    implementation libs.activity.compose
 
     // MULTIDEX:
 //    implementation 'androidx.multidex:multidex:2.0.1'
 
-    // ENCRIPTACIÓN
-    implementation 'androidx.security:security-crypto:1.0.0'
-    implementation 'androidx.biometric:biometric:1.1.0'
+    // CRYPTO
+    implementation libs.security.crypto
+    implementation libs.biometric
 }

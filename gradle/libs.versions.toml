@@ -1,18 +1,30 @@
 [versions]
+activityCompose = "1.9.3"
 afAndroidSdk = "6.8.2"
 agp = "8.4.1"
 androidApplicationVer = "8.7.3"
 appcompat = "1.7.0"
 awsAndroidSdkAppsyncGradlePlugin = "3.1.1"
 #coreKtx = "1.10.3"
+biometric = "1.1.0"
 clevertapAndroidSdk = "4.4.0"
+commonsNet = "3.5"
+converterGson = "2.9.0"
 datastore = "1.1.1"
+dexter = "6.2.2"
+firebaseBom = "33.7.0"
 firebaseCrashlyticsGradle = "3.0.2"
+firebaseMessagingKtx = "24.1.0"
 googleServices = "4.4.2"
+googleServicesVersion = "4.3.15"
 gson = "2.10.1"
 installreferrer = "2.2"
+jodaTime = "2.10.9"
+kotlinReflect = "1.9.23"
+kotlinStdlibCommon = "2.0.0"
 kotlinVersion = "2.0.0"
 ksp = "2.0.0-1.0.21"
+okhttp = "4.10.0"
 perfPlugin = "1.4.2"
 
 # PROTO BUF
@@ -20,29 +32,75 @@ protobufGradlePlugin = "0.9.0"
 protobufJavalite = "3.21.7"
 
 # ROOM
+retrofit = "2.9.0"
 roomRuntime = "2.6.1"
+runtime = "1.7.6"
+securityCrypto = "1.0.0"
+ui = "1.7.6"
 
 [libraries]
+
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+# Compose
+
+runtime = { module = "androidx.compose.runtime:runtime", version.ref = "runtime" }
+ui = { module = "androidx.compose.ui:ui", version.ref = "ui" }
+
+# Compose for activities
+activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+
+# Cryptography
+security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
+
+# OKHTTP
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okhttp" }
+mockwebserver = { module = "com.squareup.okhttp3:mockwebserver", version.ref = "okhttp" }
+
+# Utilities
+commons-net = { module = "commons-net:commons-net", version.ref = "commonsNet" }
+joda-time = { module = "joda-time:joda-time", version.ref = "jodaTime" }
+
 # AWS
 aws-android-sdk-appsync-gradle-plugin = { module = "com.amazonaws:aws-android-sdk-appsync-gradle-plugin", version.ref = "awsAndroidSdkAppsyncGradlePlugin" }
+
+# Dexter: Permissions
+dexter = { module = "com.karumi:dexter", version.ref = "dexter" }
+
+# Firebase
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+firebase-common-ktx = { module = "com.google.firebase:firebase-common-ktx" }
+firebase-config = { module = "com.google.firebase:firebase-config" }
 firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsGradle" }
 
 # Google Services
+firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
 google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
 
 # Google Services - Actualización de app en línea
+google-services-v4315 = { module = "com.google.gms:google-services", version.ref = "googleServicesVersion" }
 installreferrer = { module = "com.android.installreferrer:installreferrer", version.ref = "installreferrer" }
 #core-ktx = { module = "com.google.android.play:core-ktx", version.ref = "coreKtx" }
 
+# Kotlin
 kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0"
 kotlin-gradle-build = "com.android.tools.build:gradle:8.7.3"
 kotlin-serialization-plugin = "org.jetbrains.kotlin:kotlin-serialization:2.0.0"
 perf-plugin = { module = "com.google.firebase:perf-plugin", version.ref = "perfPlugin" }
 
+# Kotlin Reflection
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlinReflect" }
+kotlin-stdlib-common = { module = "org.jetbrains.kotlin:kotlin-stdlib-common", version.ref = "kotlinStdlibCommon" }
+
 # PROTOBUF: Parser for .proto files to Java classes, necesary for Datastore
 protobuf-javalite = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobufJavalite" }
 protobuf-gradle-plugin = { module = "com.google.protobuf:protobuf-gradle-plugin", version.ref = "protobufGradlePlugin" }
+
+# Retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 
 # ROOM
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
