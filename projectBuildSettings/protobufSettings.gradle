@@ -6,7 +6,7 @@
 
 protobuf {
     protoc {
-        artifact = "com.google.protobuf:protoc:3.10.0"
+        artifact = "com.google.protobuf:protoc:4.29.2"
     }
 
     generateProtoTasks {
