@@ -4,6 +4,11 @@ apply from: "$rootDir.path/projectBuildSettings/projectBuildTypes.gradle"
 apply from: "$rootDir.path/projectBuildSettings/projectFlavors.gradle"
 
 android {
+    compileSdkVersion 35
+    defaultConfig {
+        compileSdkVersion 35
+    }
+
     flavorDimensions "platform"
 
     // Flavors (Variables dependientes de la compilación)
@@ -25,10 +30,6 @@ android {
 
     buildFeatures {
         compose true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.11"
     }
 }
 

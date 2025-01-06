@@ -1,0 +1,80 @@
+[versions]
+afAndroidSdk = "6.8.2"
+agp = "8.4.1"
+androidApplicationVer = "8.7.3"
+appcompat = "1.7.0"
+awsAndroidSdkAppsyncGradlePlugin = "3.1.1"
+#coreKtx = "1.10.3"
+clevertapAndroidSdk = "4.4.0"
+datastore = "1.1.1"
+firebaseCrashlyticsGradle = "3.0.2"
+googleServices = "4.4.2"
+gson = "2.10.1"
+installreferrer = "2.2"
+kotlinVersion = "2.0.0"
+ksp = "2.0.0-1.0.21"
+perfPlugin = "1.4.2"
+
+# PROTO BUF
+protobufGradlePlugin = "0.9.0"
+protobufJavalite = "3.21.7"
+
+# ROOM
+roomRuntime = "2.6.1"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+# AWS
+aws-android-sdk-appsync-gradle-plugin = { module = "com.amazonaws:aws-android-sdk-appsync-gradle-plugin", version.ref = "awsAndroidSdkAppsyncGradlePlugin" }
+firebase-crashlytics-gradle = { module = "com.google.firebase:firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsGradle" }
+
+# Google Services
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+
+# Google Services - Actualización de app en línea
+installreferrer = { module = "com.android.installreferrer:installreferrer", version.ref = "installreferrer" }
+#core-ktx = { module = "com.google.android.play:core-ktx", version.ref = "coreKtx" }
+
+kotlin-gradle-plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0"
+kotlin-gradle-build = "com.android.tools.build:gradle:8.7.3"
+kotlin-serialization-plugin = "org.jetbrains.kotlin:kotlin-serialization:2.0.0"
+perf-plugin = { module = "com.google.firebase:perf-plugin", version.ref = "perfPlugin" }
+
+# PROTOBUF: Parser for .proto files to Java classes, necesary for Datastore
+protobuf-javalite = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobufJavalite" }
+protobuf-gradle-plugin = { module = "com.google.protobuf:protobuf-gradle-plugin", version.ref = "protobufGradlePlugin" }
+
+# ROOM
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRuntime" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomRuntime" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
+
+# Datastore
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+datastore-core = { module = "androidx.datastore:datastore-core", version.ref = "datastore" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+
+# Clevertap
+clevertap-android-sdk = { module = "com.clevertap.android:clevertap-android-sdk", version.ref = "clevertapAndroidSdk" }
+
+# GSON: Convets HTTP response and parses JSON
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+
+# APPSFLYER
+af-android-sdk = { module = "com.appsflyer:af-android-sdk", version.ref = "afAndroidSdk" }
+
+[plugins]
+# Project
+android-application = { id = "com.android.application", version.ref = "androidApplicationVer" }
+devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlinVersion" }
+
+# Modules
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlinVersion" }
+android-library = { id = "com.android.library" }
+android-library-kotlin = { id = 'org.jetbrains.kotlin.android' }
+android-library-protobuf = { id = 'com.google.protobuf' }
+android-library-kapt = { id = 'kotlin-kapt' }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm" }
+

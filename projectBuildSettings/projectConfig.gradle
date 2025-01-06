@@ -1,13 +1,13 @@
 ext.projectGradleConfig = [
     applicationId:        "com.kortisan.demoapp",
-    targetSdkVersion:      34,
+    targetSdkVersion:      35,
+    compileSdk:            36,
     compileSdkVersion:     35,
     minSdkVersion:         26,
     versionCode:           1,
     revisionCode:          1,
     fixCode:               1,
     launchVersionCodeName: "Alfa",
-    kotlinCompilerExtVer:  "1.5.11"
 ]
 
 def projectConfig = ext.projectGradleConfig

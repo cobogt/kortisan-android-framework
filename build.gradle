@@ -1,18 +1,13 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext {
-        kotlin_version = '1.9.23'
-    }
     dependencies {
-//    classpath 'com.amazonaws:aws-android-sdk-appsync-gradle-plugin:3.1.1'
-        classpath 'com.google.gms:google-services:4.4.2'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:3.0.2'
-        classpath 'com.google.firebase:perf-plugin:1.4.2'
-        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.9.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
-
-//        implementation project(":ksp")
-//        ksp project(":ksp")
+        //classpath libs.aws.android.sdk.appsync.gradle.plugin
+        classpath libs.google.services
+        classpath libs.firebase.crashlytics.gradle
+        classpath libs.perf.plugin
+        classpath libs.protobuf.gradle.plugin
+        classpath libs.kotlin.gradle.plugin
+        classpath libs.kotlin.serialization.plugin
+        classpath libs.kotlin.gradle.build
     }
     repositories {
         mavenCentral()
@@ -20,15 +15,12 @@ buildscript {
 }
 
 plugins {
-    id 'com.android.application' version '8.7.3' apply false
-    id 'com.android.library' version '8.7.3' apply false
-    id 'org.jetbrains.kotlin.android' version "$kotlin_version" apply false
-    id 'com.google.devtools.ksp' version '1.9.10-1.0.13' apply false
-//    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
+    id 'com.android.application' version libs.versions.androidApplicationVer apply false
+    id 'com.android.library' version libs.versions.androidApplicationVer apply false
+    id 'org.jetbrains.kotlin.android' version libs.versions.kotlinVersion apply false
+    id 'com.google.devtools.ksp' version libs.versions.ksp apply false
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }
-
-apply from: "$rootDir.path/projectBuildSettings/detectAndJoinKSP.gradle"

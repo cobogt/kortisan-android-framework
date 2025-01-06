@@ -16,3 +16,6 @@
 .cxx
 local.properties
 /.idea/sonarlint/
+
+# Kotlin 2.0
+.kotlin/

@@ -20,8 +20,8 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.9.23'
 
     // Actualización de la aplicación ????
-    implementation 'com.android.installreferrer:installreferrer:2.2'
-    implementation 'com.google.android.play:core-ktx:1.8.1'
+    // implementation libs.installreferrer
+    // implementation libs.core.ktx
 
     // UTILIDADES
     //implementation 'org.apache.commons:commons-lang3:3.12.0'

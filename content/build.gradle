@@ -2,7 +2,8 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
-    id 'com.google.devtools.ksp'
+    alias( libs.plugins.devtools.ksp )
+    alias( libs.plugins.compose.compiler )
 }
 
 apply from: "$rootDir.path/projectBuildSettings/projectBuild.gradle"
@@ -11,20 +12,19 @@ def config = ext.projectGradleConfig
 android {
     namespace 'com.kortisan.content'
     compileSdk config.compileSdkVersion
+    compileSdkVersion config.compileSdkVersion
 
     defaultConfig {
         minSdk config.minSdkVersion
         targetSdk config.targetSdkVersion
+        compileSdk config.compileSdkVersion
+        compileSdkVersion config.compileSdkVersion
         version getVersionName()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled true
         consumerProguardFiles "consumer-rules.pro"
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = config.kotlinCompilerExtVer
     }
 }
 

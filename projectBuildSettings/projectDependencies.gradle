@@ -14,30 +14,31 @@ dependencies {
     implementation 'androidx.activity:activity-ktx:1.9.3'
 
     // ROOM
-    implementation "androidx.room:room-runtime:2.6.1"
-    annotationProcessor "androidx.room:room-compiler:2.6.1"
+    implementation libs.room.runtime
+    annotationProcessor libs.room.compiler
 
-    implementation 'androidx.room:room-ktx:2.6.1'
-    implementation 'androidx.room:room-runtime:2.6.1'
-    ksp 'androidx.room:room-compiler:2.6.1'
+    implementation libs.room.ktx
+    implementation libs.room.runtime
+    ksp ( libs.room.compiler )
 
-    // DATASTORE: Reemplazo de SharedPreferences
-    implementation 'androidx.datastore:datastore:1.1.1'
-    implementation 'androidx.datastore:datastore-core:1.1.1'
-    implementation 'androidx.datastore:datastore-preferences:1.1.1'
+    // DATASTORE: Replacement for SharedPreferences
+    implementation libs.datastore
+    implementation libs.datastore.core
+    implementation libs.datastore.preferences
 
     // PROTOBUF: Parser de archivos .proto a clases Java, necesario para Datastore
-    implementation 'com.google.protobuf:protobuf-javalite:3.21.7'
+    implementation libs.protobuf.javalite
 
     // CLEVERTAP
-    implementation 'com.clevertap.android:clevertap-android-sdk:4.4.0'
+    implementation libs.clevertap.android.sdk
 
     // APPSFLYER
-    implementation 'com.appsflyer:af-android-sdk:6.8.2'
-    implementation 'com.android.installreferrer:installreferrer:2.2'
+    implementation libs.af.android.sdk
+
+    implementation libs.installreferrer
 
     // GSON: Converter HTTP y parser de Json
-    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation libs.gson
 
     // COMPOSE CON MATERIAL DESIGN
     implementation 'androidx.compose.material3:material3:1.3.1'

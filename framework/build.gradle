@@ -1,9 +1,10 @@
 plugins {
-    id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
-    id 'com.google.protobuf'
-    id 'kotlin-kapt'
-    id 'com.google.devtools.ksp'
+    alias( libs.plugins.android.library )
+    alias( libs.plugins.android.library.kotlin )
+    alias( libs.plugins.android.library.protobuf )
+    alias( libs.plugins.android.library.kapt )
+    alias( libs.plugins.devtools.ksp )
+    alias( libs.plugins.compose.compiler )
 // Habilitar cuando se instale google-services.json
 //    id 'com.google.gms.google-services'
 }
@@ -14,10 +15,13 @@ def config = ext.projectGradleConfig
 android {
     namespace 'com.kortisan.framework'
     compileSdk config.compileSdkVersion
+    compileSdkVersion config.compileSdkVersion
 
     defaultConfig {
         minSdk config.minSdkVersion
         targetSdk config.targetSdkVersion
+        compileSdk config.compileSdkVersion
+        compileSdkVersion config.compileSdkVersion
         version getVersionName()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -25,9 +29,6 @@ android {
         consumerProguardFiles "consumer-rules.pro"
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = config.kotlinCompilerExtVer
-    }
     buildFeatures {
         buildConfig true
     }
