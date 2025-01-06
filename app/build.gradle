@@ -4,40 +4,27 @@ plugins {
     id 'com.google.devtools.ksp'
 }
 
+apply from: "$rootDir.path/projectBuildSettings/projectBuild.gradle"
+
+def config = ext.projectGradleConfig
+
 android {
     namespace 'com.kortisan.demoapp'
-    compileSdk 34
+    compileSdk config.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.kortisan.demoapp"
-        minSdk 26
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        minSdk config.minSdkVersion
+        targetSdk config.targetSdkVersion
+        version getVersionName()
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        multiDexEnabled true
+        consumerProguardFiles "consumer-rules.pro"
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-
-        debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    buildFeatures {
-        buildConfig true
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
-    }
-    kotlinOptions {
-        jvmTarget = '21'
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.11"
     }
 }
 

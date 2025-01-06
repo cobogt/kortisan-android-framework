@@ -1,7 +1,7 @@
 ext.projectGradleConfig = [
     applicationId:        "com.kortisan.demoapp",
     targetSdkVersion:      34,
-    compileSdkVersion:     34,
+    compileSdkVersion:     35,
     minSdkVersion:         26,
     versionCode:           1,
     revisionCode:          1,

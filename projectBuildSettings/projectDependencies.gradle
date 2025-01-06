@@ -5,13 +5,13 @@
 
 dependencies {
     // CORE
-    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.core:core-ktx:1.15.0'
     implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'androidx.collection:collection-ktx:1.4.0'
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.1'
-    implementation 'androidx.navigation:navigation-runtime:2.7.7'
+    implementation 'androidx.collection:collection-ktx:1.4.5'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.7'
+    implementation 'androidx.navigation:navigation-runtime:2.8.5'
     implementation 'com.google.android.material:material:1.12.0'
-    implementation 'androidx.activity:activity-ktx:1.9.0'
+    implementation 'androidx.activity:activity-ktx:1.9.3'
 
     // ROOM
     implementation "androidx.room:room-runtime:2.6.1"
@@ -40,33 +40,33 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.10.1'
 
     // COMPOSE CON MATERIAL DESIGN
-    implementation 'androidx.compose.material3:material3:1.2.1'
-    implementation 'androidx.compose.material:material-icons-core:1.6.7'
-    implementation 'androidx.compose.material:material-icons-extended:1.6.7'
-    implementation 'androidx.compose.material3:material3-window-size-class:1.2.1'
+    implementation 'androidx.compose.material3:material3:1.3.1'
+    implementation 'androidx.compose.material:material-icons-core:1.7.6'
+    implementation 'androidx.compose.material:material-icons-extended:1.7.6'
+    implementation 'androidx.compose.material3:material3-window-size-class:1.3.1'
 
     // COMPOSE CON NAVEGACION
-    implementation 'androidx.navigation:navigation-compose:2.7.7'
+    implementation 'androidx.navigation:navigation-compose:2.8.5'
 
     // COMPOSE EN VIEWMODEL
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7'
 
     // UTILIDADES PARA VIEWMODELS
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7'
 
     // LINT: Calidad de código
     // runtimeOnly 'com.android.tools.lint:lint-gradle:30.4.0'
 
     // TESTING
-    implementation 'androidx.test:monitor:1.6.1'
-    androidTestImplementation "androidx.test:core:1.5.0"
-    androidTestImplementation "androidx.test:core-ktx:1.5.0"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
-    androidTestImplementation "androidx.test.ext:junit:1.1.5"
-    androidTestImplementation "androidx.test.ext:junit-ktx:1.1.5"
-    androidTestImplementation "androidx.test.ext:truth:1.5.0"
-    androidTestImplementation "androidx.test:runner:1.5.2"
-    androidTestUtil "androidx.test:orchestrator:1.4.2"
+    implementation 'androidx.test:monitor:1.7.2'
+    androidTestImplementation "androidx.test:core:1.6.1"
+    androidTestImplementation "androidx.test:core-ktx:1.6.1"
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.6.1"
+    androidTestImplementation "androidx.test.ext:junit:1.2.1"
+    androidTestImplementation "androidx.test.ext:junit-ktx:1.2.1"
+    androidTestImplementation "androidx.test.ext:truth:1.6.0"
+    androidTestImplementation "androidx.test:runner:1.6.2"
+    androidTestUtil "androidx.test:orchestrator:1.5.1"
 
     // JUNIT
     testImplementation "junit:junit:4.13.2"

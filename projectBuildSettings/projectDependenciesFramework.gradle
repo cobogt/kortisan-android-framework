@@ -5,8 +5,8 @@
 
 dependencies {
     // FIREBASE
-    implementation platform('com.google.firebase:firebase-bom:33.1.0')
-    implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
+    implementation platform('com.google.firebase:firebase-bom:33.7.0')
+    implementation 'com.google.firebase:firebase-messaging-ktx:24.1.0'
     implementation 'com.google.firebase:firebase-config'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-common-ktx'
@@ -17,7 +17,7 @@ dependencies {
 
     // REFLEXIÓN DE KOTLIN
     implementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.20'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.9.22'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-common:1.9.23'
 
     // Actualización de la aplicación ????
     implementation 'com.android.installreferrer:installreferrer:2.2'
@@ -41,11 +41,11 @@ dependencies {
     testImplementation('com.squareup.okhttp3:mockwebserver:4.10.0')
 
     // COMPOSE
-    implementation 'androidx.compose.ui:ui:1.6.7'
-    implementation 'androidx.compose.runtime:runtime:1.6.7'
+    implementation 'androidx.compose.ui:ui:1.7.6'
+    implementation 'androidx.compose.runtime:runtime:1.7.6'
 
     // COMPOSE EN ACTIVIDADES
-    implementation 'androidx.activity:activity-compose:1.9.0'
+    implementation 'androidx.activity:activity-compose:1.9.3'
 
     // MULTIDEX:
 //    implementation 'androidx.multidex:multidex:2.0.1'
